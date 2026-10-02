@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piringan — Playlist Mini</title>
+    <meta name="description" content="Playlist mini dengan piringan hitam yang berputar saat lagu diputar.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💿</text></svg>">
+</head>
+<body>
+    <main class="app">
+        <header class="hero">
+            <p class="eyebrow">Playlist mini</p>
+            <h1>Piringan</h1>
+            <p class="subtitle">Tambahkan file lagu yang kamu suka. Tekan sebuah lagu, dan piringan hitamnya ikut berputar.</p>
+        </header>
+
+        <div class="layout">
+            <section class="deck" aria-label="Pemutar">
+                <div class="stage" id="stage">
+                    <div class="platter">
+                        <div class="disc" id="disc">
+                            <div class="label" id="label">
+                                <span id="label-mark">♪</span>
+                            </div>
+                            <div class="spindle"></div>
+                        </div>
+                        <div class="shine"></div>
+                    </div>
+                    <div class="arm" id="arm" aria-hidden="true">
+                        <div class="arm-pivot"></div>
+                        <div class="arm-bar"></div>
+                        <div class="arm-head"></div>
+                    </div>
+                </div>
+
+                <div class="now">
+                    <p class="now-artist" id="now-artist">Siap diputar</p>
+                    <h2 id="now-title">Belum ada lagu</h2>
+                    <label class="sr-only" for="seek">Posisi lagu</label>
+                    <input id="seek" type="range" min="0" max="0" value="0" step="0.1" disabled>
+                    <div class="times">
+                        <span id="current-time">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                    <div class="transport">
+                        <button type="button" class="btn btn-ghost" id="prev-btn">Sebelumnya</button>
+                        <button type="button" class="btn btn-primary" id="toggle-btn">Putar</button>
+                        <button type="button" class="btn btn-ghost" id="next-btn">Berikutnya</button>
+                    </div>
+                    <label class="volume" for="volume">
+                        Volume
+                        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+                    </label>
+                </div>
+            </section>
+
+            <section class="shelf" aria-labelledby="list-heading">
+                <div class="shelf-head">
+                    <h2 id="list-heading">Daftar lagu</h2>
+                    <button type="button" class="btn btn-primary" id="add-btn">Tambah lagu</button>
+                    <input id="file-input" type="file" accept="audio/*,.mp3,.wav,.ogg,.m4a,.aac,.flac" multiple hidden>
+                </div>
+                <p id="message" class="message" role="status"></p>
+                <ul id="playlist" class="playlist"></ul>
+                <p class="hint">Pilih file mp3 dari komputermu, atau seret file itu ke halaman ini. Lagunya hanya tersimpan di browser ini.</p>
+            </section>
+        </div>
+    </main>
+    <audio id="audio" preload="metadata"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
