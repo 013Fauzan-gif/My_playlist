@@ -3,8 +3,7 @@
 Playlist mini untuk lagu yang kamu suka. Tambahkan file mp3, tekan judulnya, lalu piringan hitam ikut berputar selama musik diputar.
 
 ## Tampilan
-
-![Tampilan aplikasi Piringan](tampilan.png)
+<img width="1920" height="997" alt="screencapture-127-0-0-1-8771-Piringan-2026-10-02-15_01_36" src="https://github.com/user-attachments/assets/6cf1ce23-675f-454d-a849-3f3a216b6f38" />
 
 ## Fitur
 
