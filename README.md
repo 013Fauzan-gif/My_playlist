@@ -2,6 +2,10 @@
 
 Playlist mini untuk lagu yang kamu suka. Tambahkan file mp3, tekan judulnya, lalu piringan hitam ikut berputar selama musik diputar.
 
+## Tampilan
+
+![Tampilan aplikasi Piringan](tampilan.png)
+
 ## Fitur
 
 - Tambah lagu dari file di komputer, atau seret file ke halaman
